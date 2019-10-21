@@ -1,0 +1,15 @@
+image: conoria/alpine-pandoc
+
+pages:
+  script:
+  - apk update
+  - apk add curl alpine-sdk autoconf automake bash build-base git graphicsmagick lcms2-dev libjpeg-turbo libjpeg-turbo-dev libpng libpng-dev libtool libwebp libwebp-dev nasm zlib zlib-dev nodejs nodejs-npm
+  - npm install -g gulp
+  - npm i
+  - gulp pandoc
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+

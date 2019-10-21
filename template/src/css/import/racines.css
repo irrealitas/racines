@@ -1,0 +1,239 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'Crimson Text';
+  src:
+    url('fonts/crimson-bold-webfont.woff2') format('woff2'),
+    url('fonts/crimson-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Crimson Text';
+  src:
+    url('fonts/crimson-italic-webfont.woff2') format('woff2'),
+    url('fonts/crimson-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Crimson Text';
+  src:
+    url('fonts/crimson-bolditalic-webfont.woff2') format('woff2'),
+    url('fonts/crimson-bolditalic-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Crimson Text';
+  src:
+    url('fonts/crimson-roman-webfont.woff2') format('woff2'),
+    url('fonts/crimson-roman-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+::selection {
+  color: var(--color-static);
+  background-color: var(--color-dynamic);
+}
+
+body {
+  position: relative;
+  font-family: "Crimson Text", Crimson, Garamond, Georgia, Times, serif;
+  color: var(--color-static);
+  background-color: var(--color-background);
+  quotes: '«\00A0' '\00A0»' "“" "”";
+  font-size: 1.6rem;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  width: 100%;
+  hyphens: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: var(--color-static);
+  font-style: normal;
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: 2px solid var(--color-dynamic);
+}
+
+a:focus,
+a:active,
+a:hover {
+  background: var(--color-dynamic);
+  border-bottom: 2px solid var(--color-dynamic);
+}
+
+p {
+  padding: 0;
+  margin: 1.6em auto;
+  max-width: 66ch;
+}
+
+em {
+  font-style: italic;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0.01rem;
+  margin: 0;
+  line-height: 1.6;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.4em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+.title {
+  font-size: 2.4em;
+  margin: 0 auto;
+}
+
+.author {
+  font-size: 1.8em;
+  margin: 0.5em auto;
+}
+
+.description {
+  font-style: italic;
+  text-align: center;
+  margin: 1em auto 2em;
+}
+
+.border {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: var(--color-dynamic);
+  z-index: -10;
+}
+
+.stack {
+  width: calc(100% - calc(var(--border-width) * 2));
+  height: calc(100% - calc(var(--border-width) * 2));
+  padding: 1em;
+  text-align: center;
+  background: var(--color-background);
+
+  /* Overflow scroll invisible */
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Overflow scroll invisible */
+.stack::-webkit-scrollbar {
+  display: none;
+}
+
+.stack__links {
+  display: block;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+.stack__links  .links {
+  display: block;
+  overflow: hidden;
+  margin: 0.5em auto;
+  padding: 1em;
+  width: 100%;
+  font-size: 1.5em;
+  color: var(--color-static);
+  background: var(--color-background);
+  border: var(--border-width) solid var(--color-dynamic);
+}
+
+.stack__links .links:focus,
+.stack__links .links:active,
+.stack__links .links:hover {
+  border: var(--border-width) solid var(--color-dynamic);
+  background: var(--color-dynamic);
+  color: var(--color-static);
+}
+
+.stack__social {
+  margin: 2em auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  line-height: 0;
+  max-width: 600px;
+}
+
+.stack__social .links {
+  color: var(--color-dynamic);
+  background: var(--color-background);
+  border: var(--border-width) solid var(--color-dynamic);
+  fill: var(--color-static);
+  text-align: center;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  flex-basis: calc(25% - 0.5em);
+  height: 3em;
+}
+
+.stack__social .links:focus,
+.stack__social .links:active,
+.stack__social .links:hover {
+  border: var(--border-width) solid var(--color-dynamic);
+  background: var(--color-dynamic);
+  color: var(--color-static);
+  fill: var(--color-static);
+}
+
+.stack__social svg {
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+  font-size: 2em;
+  margin: 0 auto;
+  height: 10vh;
+}
+
+.logo img {
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+}

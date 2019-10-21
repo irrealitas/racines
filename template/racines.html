@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+<head>
+  <!-- Racines tool. Made by hype.rreell.es. MIT License. -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$" />
+$endif$
+  <title>$pagetitle$</title>
+  <style>
+    :root {
+      --color-background: $if(color-background)$$color-background$;$else$#fff;$endif$
+      --color-static: $if(color-static)$$color-static$;$else$#000;$endif$
+      --color-dynamic: $if(color-dynamic)$$color-dynamic$;$else$#f00;$endif$
+      --border-width: $if(border-width)$$border-width$;$else$4px;$endif$
+    }
+  </style>
+  <link rel="icon" type="image/png" sizes="180x180" href="template/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="template/img/favicon.png">
+  <link rel="stylesheet" href="template/racines.css" />
+</head>
+<body>
+
+<div class="border">
+</div>
+
+<main class="stack">
+
+<div class="stack__description">
+
+$if(logo-top)$
+<div class="logo">$logo-top$</div>
+$else$
+$if(title)$<h1 class="title">$title$</h1>$endif$
+$endif$
+
+$if(author)$
+<h2 class="author">$author$</h2>
+$endif$
+
+$if(description)$
+<p class="description">$description$</p>
+$endif$
+
+</div>
+
+<div class="stack__links">
+$for(links)$
+<a href="$if(links.url)$$links.url$$endif$" class="links">$if(links.text)$$links.text$$endif$</a>
+$endfor$
+</div>
+
+<div class="stack__social">
+$for(social)$
+<a href="$if(social.url)$$social.url$$endif$" class="links"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><title>$if(social.network)$$social.network$$endif$</title>$if(social.path)$$social.path$$endif$</svg></a>
+$endfor$
+</div>
+
+$if(logo-bottom)$
+<div class="logo">$logo-bottom$</div>
+$endif$
+
+</main>
+
+<script type="text/javascript" src="template/racines.js" async></script>
+</body>
+</html>
