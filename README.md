@@ -99,6 +99,11 @@ pages:
   - master
 ```
 
+## Examples
+
+* Here with [Gitlab Pages](https://hyperreelles.gitlab.io/racines)
+* The *Racines* of our friends [Abrüpt](https://abrupt.ch/www)
+
 ## Icons
 
 The SVG icons come from [Simple Icons](https://simpleicons.org/) (CC-0).
