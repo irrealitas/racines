@@ -47,7 +47,7 @@ gulp.task('css', function(){
    return gulp.src('template/src/img/**')
         .pipe(cache(imagemin([
           imagemin.gifsicle({interlaced: true}),
-          imagemin.jpegtran({progressive: true}),
+          imagemin.mozjpeg({progressive: true}),
           imagemin.optipng({optimizationLevel: 5}),
           imagemin.svgo({
               plugins: [
@@ -107,7 +107,7 @@ gulp.task(
 gulp.task('browser-sync', function(cb) {
   browserSync({
     server: {
-      baseDir: "public"
+      baseDir: "docs"
     },
     open: false
   }, cb);
