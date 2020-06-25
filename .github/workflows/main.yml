@@ -1,0 +1,31 @@
+name: Racines
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup
+      run: |
+        mkdir public
+        echo "::set-env name=FILES::$(printf '"%s" ' text/*.md)"
+    - name : Pandoc
+      uses: docker://pandoc/core:2.9
+      with:
+        args: >-
+          -s -f markdown -t html
+          --self-contained
+          --template=template/racines.html
+          -o public/index.html ${{ env.FILES }}
+    - name : Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: public
