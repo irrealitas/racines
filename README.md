@@ -56,7 +56,7 @@ links:
 - text: "The text of the link, with possible<br><em>HTML tag</em>"
   url: "https://abrupt.ch/"
 - text: "Etc."
-  url: "https://hype.rreell.es"
+  url: "https://irl.st"
 ```
 
 In the file `text/social.md` :
@@ -101,8 +101,9 @@ pages:
 
 ## Examples
 
-* Here with [Gitlab Pages](https://hyperreelles.gitlab.io/racines)
-* The *Racines* of our friends [Abrüpt](https://abrupt.ch/www)
+* with [GitLab Pages](https://irrealitas.gitlab.io/racines)
+* or with [GitHub Pages](https://irrealitas.github.io/racines/)
+* the *Racines* of our friends [Abrüpt](https://abrupt.ch/www)
 
 ## Icons
 
