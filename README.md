@@ -81,7 +81,7 @@ If you're not working with Gulp, you can work directly with the files in `templa
 
 ## GitLab Pages or GitHub Pages
 
-You can host this *Racines* page on Gitlab Pages or GitHub Pages with the power of GitLab CI (see [.gitlab-ci.yml](.gitlab-ci.yml)) or GitHub Actions () (see [main.yml](.github/workflows/main.yml)) ; it will run Pandoc automatically. You can consenquently edit your *Racines* page directly on GitLab or GitHub by modifying the files in the `text` folder.
+You can host this *Racines* page on Gitlab Pages or GitHub Pages with the power of GitLab CI (see [.gitlab-ci.yml](.gitlab-ci.yml)) or GitHub Actions (see [main.yml](.github/workflows/main.yml)) ; it will run Pandoc automatically. You can consenquently edit your *Racines* page directly on GitLab or GitHub by modifying the files in the `text` folder.
 
 ## Examples
 
