@@ -5,7 +5,7 @@
 MEXT = md
 
 # Public folder
-FOLDER = docs
+FOLDER = public
 
 # For SSH
 USER=name

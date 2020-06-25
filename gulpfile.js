@@ -107,7 +107,7 @@ gulp.task(
 gulp.task('browser-sync', function(cb) {
   browserSync({
     server: {
-      baseDir: "docs"
+      baseDir: "public"
     },
     open: false
   }, cb);
