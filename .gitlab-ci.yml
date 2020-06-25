@@ -9,7 +9,7 @@ pages:
   - gulp pandoc
   artifacts:
     paths:
-    - docs
+    - public
   only:
   - master
 
