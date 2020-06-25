@@ -8,7 +8,7 @@ pages:
   # - npm i
   - apk add curl alpine-sdk autoconf automake bash build-base
   - mkdir public
-  - gulp pandoc-simple
+  - make html
   artifacts:
     paths:
     - public
